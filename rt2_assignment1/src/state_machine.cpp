@@ -43,7 +43,7 @@ int main(int argc, char **argv)
    /*
    Waiting for the action server to start
    */
-   std::cout << "Waiting for action server" << std::endl;
+   std::cout << "Waiting for action server..." << std::endl;
    client_act.waitForServer();
    
      
@@ -96,7 +96,7 @@ int main(int argc, char **argv)
 		        */
 	   		    if(!start)
 	   		    {
-	   		        std::cout << "\nGoal Cancelled" << std::endl;
+	   		        std::cout << "\nGoal Cancelled." << std::endl;
 	   		        client_act.cancelGoal();
 	   		        break;
 	   		    }
@@ -107,7 +107,7 @@ int main(int argc, char **argv)
 			
 			if(res->reached)
 			{
-		   		std::cout << "Position reached" << std::endl;
+		   		std::cout << "\nPosition reached." << std::endl;
 		   	}	
 			
 			

@@ -7,13 +7,13 @@ def main():
     ui_client = rospy.ServiceProxy('/user_interface', Command)
     time.sleep(10)
     rate = rospy.Rate(20)
-    x = int(input("\nPress 1 to start the robot "))
+    x = int(input("\nPress 1 to start the robot: "))
     while not rospy.is_shutdown():
         if (x == 1):
             ui_client("start")
             x = int(input("\nPress 0 to stop the robot: "))
         else:
-            print("Please wait, the robot is going to stop when the position will be reached")
+            print("The robot will stop after reaching the position. Please wait.")
             ui_client("stop")
             x = int(input("\nPress 1 to start the robot: "))
             
