@@ -41,11 +41,12 @@ Before proceeding with the instructions, please ensure that both ROS1 and ROS2 a
    chmod +x <file_name>
    ```
 4. To successfully proceed with this project, it is essential to have both Gazebo and Vrep simulation environments installed on your system. If you do not have them installed already, please follow the provided instructions for installation:
-  **For Gazebo**
+
+**For Gazebo**
   
   * Please follow the instructions available here: http://gazebosim.org/tutorials?tut=install_ubuntu
   
-  **For Vrep/CoppeliaSim**
+**For Vrep/CoppeliaSim**
   
   * Download the PRO-EDU version from: http://www.coppeliarobotics.com/downloads.html
   * Vrep should be already integrated with ROS. You just need to launch the ROS master before running the V-REP (CoppeliaSim) software.
