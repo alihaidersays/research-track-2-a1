@@ -8,9 +8,9 @@ MSc Robotics Engineering, University of Genoa, Italy
 Instructor: [Prof. Carmine Recchiuto](https://rubrica.unige.it/personale/UkNDWV1r)
 
 ## Installation
-Before proceeding with the instructions, please ensure that both ROS1 and ROS2 are installed on your system. This project relies on both of them. There are three branches in this repository, and each of them needs to be installed as described below.
+Before proceeding with the instructions, please ensure that both ROS1 and ROS2 are installed on your system. This project relies on both of them. There are multiple branches in this repository, and each of them needs to be installed as described below.
 
-1. To successfully deploy the code available in the "main" branch, install the code in the ROS workspace at `{ros_ws}/src` and run the following commands to build the workspace:
+1. To successfully deploy the code available in the "main" and "action" branches, install the code in the ROS workspace at `{ros_ws}/src` and run the following commands to build the workspace:
     * Run the following command to build the workspace:
       ```
       catkin_make
