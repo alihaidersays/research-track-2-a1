@@ -97,3 +97,18 @@ To run this part of the project, ensure that you are in the '/root' folder where
 ./rt2_assignment_1a.sh
 ```
 After executing the command, you will see three terminal windows appearing on the screen, including a Gazebo simulation with a mobile robot. Allow the system to load all the required files. Locate the terminal window titled 'user_interface', which will prompt you to press 1. Pressing 1 will initiate the movement of the mobile robot toward the randomly generated goal target. If you press 0 during goal execution, the robot will stop immediately.
+
+### Part 2: Simulating Mobile Robot in Gazebo using ROS1/ROS2 Bridge
+
+From the user's perspective, Part 2 of this project closely resembles Part 1. However, there are two main differences, primarily based on architecture.
+
+The first major difference is that this part is divided into two sub-parts, with one built in ROS1 and the other in ROS2. The communication between these sub-parts is facilitated by utilizing the ROS1/ROS2 bridge. The second difference is the usage of a simple server to provide randomly generated goal coordinates to the 'go_to_point' node, instead of employing an action server as done in Part 1. Consequently, when a goal cancellation request is made, the robot will not stop immediately but will finish the current goal before stopping.
+
+In the ROS2 sub-part, we have developed the 'state_machine' and 'position_service' nodes as components. These components interact with the ROS1 nodes, namely 'user_interface.py' and 'go_to_point.py', as well as the Gazebo simulation, facilitated by the bridge.
+
+To run this part of the project, ensure that you are in the '/root' folder where you have already downloaded the 'rt2_assignment_1b.sh' bash file. Open a terminal and execute the following command:
+```
+./rt2_assignment_1b.sh
+```
+
+After executing the command, you will observe four terminal windows appearing on the screen, including a Gazebo simulation featuring a mobile robot. Allow the system time to load all the necessary files. Locate the terminal window titled 'user_interface', which will prompt you to press 1. Pressing 1 will initiate the movement of the mobile robot toward the randomly generated goal target. If a goal cancellation request is made during goal execution by pressing 0, the robot will not stop immediately since an action server is not employed in this part. The robot will complete the currently assigned target before coming to a stop.
